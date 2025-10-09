@@ -234,13 +234,13 @@
 
         initializeGame();
     </script>
-	
-	<!-- ---------- ALT ORTADA SABİT REKLAM (738x95) - MERKEZDEN KESME YAKLAŞIMI ---------- -->
+    
+    <!-- ---------- ALT ORTADA SABİT REKLAM (738x95) - MERKEZDEN KESME YAKLAŞIMI ---------- -->
 <style>
   /* Container: alt ortada, sabit, taşan içerik kırpılır */
   #ad-container {
     position: fixed;
-    bottom: 0;
+    top: 0; /* Changed from bottom: 0 */
     left: 50%;
     transform: translateX(-50%);
     width: min(738px, calc(100% - 20px)); /* 738px ama mobilde kenarlara 10px boşluk */
@@ -248,9 +248,9 @@
     background: rgba(0,0,0,0.90);
     display: none;
     z-index: 99999;
-    border-radius: 8px 8px 0 0;
+    border-radius: 0 0 8px 8px; /* Changed to round bottom corners */
     overflow: hidden; /* İÇERİĞİN TAŞAN KISMI KIRPILSIN */
-    box-shadow: 0 -2px 12px rgba(0,0,0,0.45);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.45); /* Adjusted shadow direction */
     box-sizing: border-box;
   }
 
